@@ -9,7 +9,7 @@ export default function RandomChampCard() {
     const [currentChampionIndex, setCurrentChampionIndex] = React.useState<number | null>(null);
 
     React.useEffect(() => {
-        fetch("http://localhost:3000/api/champions", {
+        fetch("/api/champions", {
             cache: "force-cache"
         }).then((res) => res.json())
             .then((data) => {

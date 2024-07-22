@@ -1,5 +1,4 @@
 "use client"
-import Image from "next/image"
 import { ChampionProps } from "@/types/champions.interface"
 import RandomChampCard from "../RandomChampCard";
 import ChampCard from "../ChampCard";
@@ -10,7 +9,7 @@ export function Component() {
   const [flipAllCards, setFlipAllCards] = useState(true);
 
   useEffect(() => {
-      fetch("http://localhost:3000/api/champions", {
+      fetch("/api/champions", {
         cache: "force-cache"
       }).then((res) => res.json())
         .then((data) => {
